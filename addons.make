@@ -1,0 +1,4 @@
+ofxOsc
+ofxThreadedImageLoader
+ofxDomemaster
+ofxSyphon
