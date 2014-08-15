@@ -36,6 +36,8 @@ void ofApp::setup(){
     sphere.setPosition(0, 0, 0);
     sphere.setOrientation(ofVec3f(90,0,0));
     
+    sphere.mapTexCoords(1, 0, 0, 1);
+    
     domemaster.setup();
     domemaster.setCameraPosition(0,0,10);
     
@@ -47,7 +49,6 @@ void ofApp::setup(){
         display.push_back(i);
         fIndex.push_back(i);
     }
-    
     
 }
 
@@ -133,6 +134,8 @@ void ofApp::draw(){
     
     glEnable(GL_CULL_FACE);
     glCullFace(GL_FRONT);
+    
+    
     
     images[display[0]].bind();
 
