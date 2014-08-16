@@ -145,7 +145,7 @@ void Pano::draw(){
     ofDrawBitmapString("faster  shift", width-215, 59);
     ofDrawBitmapString("reset   r", width-215, 72);
     if (!loading){
-        ofDrawBitmapString("PANO 2 DOME", 20, 20);
+        ofDrawBitmapString("PANO2DOME", 20, 20);
         ofDrawBitmapString("drop equirectangular pano files", 20, 33);
         ofDrawBitmapString("previous file   -", 20, 46);
         ofDrawBitmapString("next file       +", 20, 59);
