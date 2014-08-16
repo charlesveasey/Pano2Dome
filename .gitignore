@@ -36,3 +36,15 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+
+
+## Visual Studio
+*.suo
+*.user
+*.sln.docstates
+*.opensdf
+*.pdb
+*.exp
+*.sdf
+*.ilk
+[Oo]bj/

@@ -1,8 +1,11 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxDomemaster.h"
-#include "ofxThreadedImageLoader.h"
+#include "pano.h"
+
+#ifdef TARGET_WIN32
+#include "ofxXboxController.h"
+#endif
 
 class ofApp : public ofBaseApp{
     
@@ -13,28 +16,17 @@ public:
     void exit();
     
     void keyPressed(int key);
-    void keyReleased(int key);
-    void mouseMoved(int x, int y );
     void mouseDragged(int x, int y, int button);
-    void mousePressed(int x, int y, int button);
-    void mouseReleased(int x, int y, int button);
     void windowResized(int w, int h);
     void dragEvent(ofDragInfo dragInfo);
-    void gotMessage(ofMessage msg);
-    void drawScene();
-    
-    ofxDomemaster domemaster;
-    ofSpherePrimitive sphere;
-    
-    ofxThreadedImageLoader loader;
-    vector<ofImage> images;
-    int total;
-    ofImage* image;
-    ofTexture texture;
-    
-    void parseKey(int key, bool down);
-    void reset();
-    void previous();
-    void next();
-    int fileIndex;
+
+	Pano pano;
+
+#ifdef TARGET_WIN32
+	ofxXboxController xbox;
+	Gamepad* gamepad;
+	bool bNext;
+	bool bPrevious;
+#endif
+
 };
