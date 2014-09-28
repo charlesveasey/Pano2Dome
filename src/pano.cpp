@@ -71,33 +71,45 @@ void Pano::update(){
 		mod = 1;
 	}
 	if (ofGetKeyPressed(OF_KEY_COMMAND) || ofGetKeyPressed(OF_KEY_CONTROL)){
-		if (ofGetKeyPressed(OF_KEY_LEFT)){
+        if (ofGetKeyPressed(OF_KEY_ALT)) {
+            if (ofGetKeyPressed(OF_KEY_UP)){
+                move(0, 0, tv*mod);
+            }
+            if (ofGetKeyPressed(OF_KEY_DOWN)){
+                move(0, 0, -tv*mod);
+            }
+        }
+        else {
+            if (ofGetKeyPressed(OF_KEY_UP)){
+                move(0, -tv*mod, 0);
+            }
+            if (ofGetKeyPressed(OF_KEY_DOWN)){
+                move(0, tv*mod, 0);
+            }
+        }
+        if (ofGetKeyPressed(OF_KEY_LEFT)){
             move(tv*mod, 0, 0);
         }
         if (ofGetKeyPressed(OF_KEY_RIGHT)){
             move(-tv*mod, 0, 0);
         }
-        if (ofGetKeyPressed(OF_KEY_UP)){
-            move(0, -tv*mod, 0);
-        }
-        if (ofGetKeyPressed(OF_KEY_DOWN)){
-            move(0, tv*mod, 0);
-        }
-    }
-	else if (ofGetKeyPressed(OF_KEY_ALT)) {
-        if (ofGetKeyPressed(OF_KEY_UP)){
-            move(0, 0, tv*mod);
-        }
-        if (ofGetKeyPressed(OF_KEY_DOWN)){
-            move(0, 0, -tv*mod);
-        }
     }
     else {
-		if (ofGetKeyPressed(OF_KEY_LEFT)){
-            rotate(rv*mod, 0, -1, 0);
+        if (ofGetKeyPressed(OF_KEY_ALT)) {
+            if (ofGetKeyPressed(OF_KEY_LEFT)){
+                rotate(rv*mod, 0, -1, 0);
+            }
+            if (ofGetKeyPressed(OF_KEY_RIGHT)){
+                rotate(rv*mod, 0, 1, 0);
+            }
         }
-        if (ofGetKeyPressed(OF_KEY_RIGHT)){
-            rotate(rv*mod, 0, 1, 0);
+        else {
+            if (ofGetKeyPressed(OF_KEY_LEFT)){
+                rotate(rv*mod, 0, 0, -1);
+            }
+            if (ofGetKeyPressed(OF_KEY_RIGHT)){
+                rotate(rv*mod, 0, 0, 1);
+            }
         }
         if (ofGetKeyPressed(OF_KEY_UP)){
             rotate(rv*mod, 1, 0, 0);
@@ -141,7 +153,7 @@ void Pano::draw(){
     ofSetColor(255);
     ofDrawBitmapString("look    arrows", width-212, 20);
     ofDrawBitmapString("move    ctrl/cmd + arrows", width-212, 33);
-    ofDrawBitmapString("zoom    alt + up/down", width-212, 46);
+    ofDrawBitmapString("axis    alt", width-212, 46);
     ofDrawBitmapString("faster  shift", width-212, 59);
     ofDrawBitmapString("reset   r", width-212, 72);
 
