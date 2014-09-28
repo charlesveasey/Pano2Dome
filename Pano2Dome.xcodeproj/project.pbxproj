@@ -12,6 +12,7 @@
 		4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AED834CE4DEC5260AF302A2 /* ofxOscParameterSync.cpp */; };
 		510CAFE035E576A4E1502D52 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6DEF695B88BA5FAACEAA937 /* UdpSocket.cpp */; };
 		560529ED19D5F077000CBE63 /* pano.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 560529EB19D5F077000CBE63 /* pano.cpp */; };
+		56AE6BCD19D8808E0076FB4B /* ofxMultiGLFWWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56AE6BC519D8808E0076FB4B /* ofxMultiGLFWWindow.cpp */; };
 		5864AD82E20F15536D054EA3 /* ofxOscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF49D76C45D5DB505A234880 /* ofxOscMessage.cpp */; };
 		62545D179C94265CA1389D4A /* OscOutboundPacketStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A47AC60FFAFC3BF093EC0F /* OscOutboundPacketStream.cpp */; };
 		640279EE111671BD026CB013 /* ofxOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2FAC65C491D4231379F3298 /* ofxOscReceiver.cpp */; };
@@ -91,6 +92,8 @@
 		4E95FB446A9C9C6F0DE12D75 /* OscPrintReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPrintReceivedElements.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.h; sourceTree = SOURCE_ROOT; };
 		560529EB19D5F077000CBE63 /* pano.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pano.cpp; sourceTree = "<group>"; };
 		560529EC19D5F077000CBE63 /* pano.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pano.h; sourceTree = "<group>"; };
+		56AE6BC519D8808E0076FB4B /* ofxMultiGLFWWindow.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = ofxMultiGLFWWindow.cpp; sourceTree = "<group>"; };
+		56AE6BC619D8808E0076FB4B /* ofxMultiGLFWWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMultiGLFWWindow.h; sourceTree = "<group>"; };
 		5928AA323F5C2690B06C837D /* UdpSocketWin.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = UdpSocketWin.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/win32/UdpSocketWin.cpp; sourceTree = SOURCE_ROOT; };
 		63A47AC60FFAFC3BF093EC0F /* OscOutboundPacketStream.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscOutboundPacketStream.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.cpp; sourceTree = SOURCE_ROOT; };
 		65EEFA3DA3526E9CDD9C21F9 /* ofxOscBundle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscBundle.cpp; path = ../../../addons/ofxOsc/src/ofxOscBundle.cpp; sourceTree = SOURCE_ROOT; };
@@ -212,6 +215,24 @@
 			name = ofxThreadedImageLoader;
 			sourceTree = "<group>";
 		};
+		56AE6B9619D8808E0076FB4B /* ofxMultiGLFWWindow */ = {
+			isa = PBXGroup;
+			children = (
+				56AE6BC419D8808E0076FB4B /* src */,
+			);
+			name = ofxMultiGLFWWindow;
+			path = ../../../addons/ofxMultiGLFWWindow;
+			sourceTree = "<group>";
+		};
+		56AE6BC419D8808E0076FB4B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				56AE6BC519D8808E0076FB4B /* ofxMultiGLFWWindow.cpp */,
+				56AE6BC619D8808E0076FB4B /* ofxMultiGLFWWindow.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		641362CA659FAFEE4E81001B /* posix */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +262,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				56AE6B9619D8808E0076FB4B /* ofxMultiGLFWWindow */,
 				E6053AB7FEC63D5F83825B88 /* ofxOsc */,
 				3CD2B0AEE6FE628A91175CDA /* ofxThreadedImageLoader */,
 				D8F4313FD7C478E115C8AF9C /* ofxDomemaster */,
@@ -502,6 +524,7 @@
 				0546D1A38E13BD319CC9755B /* OscReceivedElements.cpp in Sources */,
 				879A251454401BC0B6E4F238 /* OscTypes.cpp in Sources */,
 				EC26F225D807F4F069405924 /* ofxThreadedImageLoader.cpp in Sources */,
+				56AE6BCD19D8808E0076FB4B /* ofxMultiGLFWWindow.cpp in Sources */,
 				70DA42C4499ED491102E845F /* ofxDomemaster.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "pano.h"
+#include "ofxMultiGLFWWindow.h"
 
 #ifdef TARGET_WIN32
 #include "ofxXboxController.h"
@@ -21,6 +22,8 @@ public:
     void dragEvent(ofDragInfo dragInfo);
 
 	Pano pano;
+    ofxMultiGLFWWindow *glfw;
+    bool bFullscreen;
 
 #ifdef TARGET_WIN32
 	ofxXboxController xbox;

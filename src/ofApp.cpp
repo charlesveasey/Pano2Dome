@@ -3,9 +3,9 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 	ofSetVerticalSync(true);
+    glfw = (ofxMultiGLFWWindow*)ofGetWindowPtr();
 	pano.setup();
-    
-    
+    bFullscreen = false;
 
 #ifdef TARGET_WIN32
 	xbox.setup();
@@ -60,8 +60,26 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-	pano.keyPressed(key);
     
+    // move window
+    if (key == '1'){
+        bFullscreen = false;
+        ofSetFullscreen(bFullscreen);
+        ofRectangle rect = glfw->getMonitorRect(0);
+        ofSetWindowPosition(rect.getMinX(), rect.getMinY());
+    }
+    else if (key == '2'){
+        ofRectangle rect = glfw->getMonitorRect(1);
+        ofSetWindowPosition(rect.getMinX(), rect.getMinY());
+        bFullscreen = true;
+        ofSetFullscreen(bFullscreen);
+    }
+    else if (key == 'f'){
+        bFullscreen = !bFullscreen;
+        ofSetFullscreen(bFullscreen);
+    }
+    
+	pano.keyPressed(key);
 }
 
 //--------------------------------------------------------------

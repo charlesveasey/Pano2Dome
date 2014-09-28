@@ -139,16 +139,22 @@ void Pano::draw(){
     
 	// draw text
     ofSetColor(255);
-    ofDrawBitmapString("look    arrows", width-215, 20);
-    ofDrawBitmapString("move    ctrl/cmd + arrows", width-215, 33);
-    ofDrawBitmapString("zoom    alt + up/down", width-215, 46);
-    ofDrawBitmapString("faster  shift", width-215, 59);
-    ofDrawBitmapString("reset   r", width-215, 72);
+    ofDrawBitmapString("look    arrows", width-212, 20);
+    ofDrawBitmapString("move    ctrl/cmd + arrows", width-212, 33);
+    ofDrawBitmapString("zoom    alt + up/down", width-212, 46);
+    ofDrawBitmapString("faster  shift", width-212, 59);
+    ofDrawBitmapString("reset   r", width-212, 72);
+
+    
     if (!loading){
         ofDrawBitmapString("PANO2DOME", 20, 20);
         ofDrawBitmapString("drop equirectangular pano files", 20, 33);
-        ofDrawBitmapString("previous file   -", 20, 46);
-        ofDrawBitmapString("next file       +", 20, 59);
+        ofDrawBitmapString("previous file   -", 20, 51);
+        ofDrawBitmapString("next file       +", 20, 64);
+        
+        ofDrawBitmapString("1  move to monitor", 20, 82);
+        ofDrawBitmapString("2  move to monitor", 20, 95);
+        ofDrawBitmapString("f  fullscreen", 20, 108);
     }
     else if (loading) {
         ofDrawBitmapString("loading", 20, 20);
