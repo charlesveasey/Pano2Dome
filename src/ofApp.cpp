@@ -4,6 +4,8 @@
 void ofApp::setup(){
 	ofSetVerticalSync(true);
 	pano.setup();
+    
+    
 
 #ifdef TARGET_WIN32
 	xbox.setup();
@@ -59,6 +61,7 @@ void ofApp::draw(){
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
 	pano.keyPressed(key);
+    
 }
 
 //--------------------------------------------------------------
